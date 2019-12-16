@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore:latest
+FROM microsoft/nanoserver:latest
 
 LABEL maintainer="git@ashleypoole.co.uk"
 
@@ -13,5 +13,3 @@ RUN del C:\jre-8u91-windows-x64.exe
 RUN powershell ./SetPaths.ps1
 
 RUN powershell choco install zap -y --ignore-dependencies
-
-WORKDIR C:\\Program Files\\OWASP\\Zed Attack Proxy
